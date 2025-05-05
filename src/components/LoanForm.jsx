@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { TextField, Button, Grid } from '@mui/material';
 
-const LoanForm = ({ onSubmit }) => {
-  const [amount, setAmount] = useState('');
-  const [rate, setRate] = useState('');
-  const [term, setTerm] = useState('');
-
+const LoanForm = ({ amount, setAmount, rate, setRate, term, setTerm, onSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const loanAmount = parseFloat(amount);
@@ -15,6 +11,7 @@ const LoanForm = ({ onSubmit }) => {
       onSubmit(loanAmount, interestRate, termYears);
     }
   };
+
 
   return (
     <form onSubmit={handleSubmit}>
