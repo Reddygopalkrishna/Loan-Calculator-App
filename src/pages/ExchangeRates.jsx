@@ -1,10 +1,14 @@
 import React from 'react';
+import { Typography } from '@mui/material';
+import ExchangeRateTable from '../components/ExchangeRateTable';
 
 const ExchangeRates = () => {
   return (
     <div>
-      <h2>Exchange Rates (LIVE)</h2>
-      <p>This will show real-time currency exchange data.</p>
+      <Typography variant="h4" align="center" sx={{ mt: 3 }}>
+        Exchange Rates (Live)
+      </Typography>
+      <ExchangeRateTable baseAmount={1000} /> {/* You can pass EMI here */}
     </div>
   );
 };
