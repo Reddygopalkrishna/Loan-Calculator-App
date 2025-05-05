@@ -37,7 +37,8 @@ const App = () => {
               <Route path="/" element={<Home />} />
               <Route path="/exchange-rates" element={<ExchangeRates />} />
               <Route path="/error" element={<ErrorPage />} />
-              <Route path="*" element={<About />} />
+              <Route path="/about" element={<About />} />
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
           </Box>
         </MuiThemeProvider>

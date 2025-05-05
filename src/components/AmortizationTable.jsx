@@ -8,8 +8,8 @@ const AmortizationTable = ({ schedule, currency }) => {
   }).format(val);
 
   return (
-    <TableContainer component={Paper}>
-      <Table>
+    <TableContainer component={Paper} sx={{ maxHeight: 400, overflowY: 'auto' }}>
+      <Table stickyHeader>
         <TableHead>
           <TableRow>
             <TableCell>Month</TableCell>
