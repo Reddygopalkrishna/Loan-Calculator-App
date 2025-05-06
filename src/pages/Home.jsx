@@ -55,17 +55,19 @@ const Home = () => {
           <Grid item xs={12} md={2}>
             <CurrencySelector />
           </Grid>
-          <Grid item xs={12} md={2}>
-            <Button
-              variant="outlined"
-              color="secondary"
-              sx={{ mt: { xs: 2, md: 0 }, width: '100%' }}
-              onClick={handleReset}
-            >
-              RESET TABLE
-            </Button>
-          </Grid>
-          <Grid item xs={12} md={5}>
+          {schedule.length > 0 && (
+            <Grid item xs={12} md={2}>
+              <Button
+                variant="outlined"
+                color="secondary"
+                sx={{ mt: { xs: 2, md: 0 }, width: '100%' }}
+                onClick={handleReset}
+              >
+                RESET TABLE
+              </Button>
+            </Grid>
+          )}
+          <Grid item xs={12} md={schedule.length > 0 ? 5 : 7}>
             {emi > 0 && (
               <Typography variant="h6" sx={{ mt: { xs: 2, md: 0 } }}>
                 Monthly EMI: {new Intl.NumberFormat('en-US', {
